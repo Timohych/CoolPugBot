@@ -1,0 +1,259 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: #fbf1c7;
+}
+
+/* Контейнер для содержимого */
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Стили для шапки */
+header {
+    padding: 1.5rem;
+    background-color: #ebdbb2;
+    text-align: left;
+    width: 100%;
+}
+
+.site-title {
+    font-family: 'JetBrains Mono', monospace;
+    color: #98971a;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для основного содержимого */
+main {
+    flex: 1;
+    padding: 2rem;
+    background-color: #f9f5d7;
+    border-radius: 8px;
+    margin: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Стили для секции возможностей */
+.features {
+    margin-top: 3rem;
+    padding: 2rem 0;
+}
+
+.features-title {
+    text-align: center;
+    color: #504945;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.features-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.feature-item {
+    background: #fbf1c7;
+    padding: 1.5rem;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.feature-item h3 {
+    color: #98971a;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.feature-item p {
+    color: #504945;
+    line-height: 1.6;
+}
+
+/* Адаптивность для секции возможностей */
+@media (max-width: 768px) {
+    .features {
+        margin-top: 2rem;
+        padding: 1rem 0;
+    }
+
+    .features-title {
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .features-list {
+        gap: 1rem;
+    }
+
+    .feature-item {
+        padding: 1.2rem;
+    }
+}
+
+/* Стили для секции с изображением */
+.hero-section {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    margin-bottom: 1.5rem;
+}
+
+.hero-subtitle {
+    font-family: 'JetBrains Mono', monospace;
+    color: #504945;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Стили для подвала */
+footer {
+    padding: 1.5rem;
+    background-color: #fbf1c7;
+    text-align: center;
+    width: 100%;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: #504945;
+    font-family: 'JetBrains Mono', monospace;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+    background-color: #ebdbb2;
+    color: #98971a;
+    transform: translateY(-2px);
+}
+
+.footer-link-support {
+    color: #9d0006;
+    border: 2px solid #9d0006;
+}
+
+.footer-link-support:hover {
+    background-color: #9d0006;
+    color: #fbf1c7;
+    border-color: #9d0006;
+}
+
+.footer-icon {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    transition: all 0.3s ease;
+}
+
+/* Медиа-запросы для адаптивности */
+@media (max-width: 768px) {
+    .site-title {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    main {
+        padding: 1rem;
+        margin: 0.5rem;
+    }
+
+    header, footer {
+        padding: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .site-title {
+        font-size: 1.5rem;
+        letter-spacing: 0.5px;
+    }
+
+    main {
+        padding: 0.8rem;
+        margin: 0.3rem;
+    }
+
+    body {
+        font-size: 14px;
+    }
+
+    .hero-section {
+        padding: 1rem 0;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .hero-image {
+        margin-bottom: 1rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-link {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .footer-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
