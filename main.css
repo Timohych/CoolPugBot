@@ -1,23 +1,26 @@
-/* Сброс стилей */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Основные стили */
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin: 0;
     background-color: #fbf1c7;
 }
 
-/* Контейнер для содержимого */
+.page-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+
 .container {
     width: 100%;
     padding-right: 15px;
@@ -26,11 +29,11 @@ body {
     margin-left: auto;
 }
 
-/* Стили для шапки */
+
 header {
     padding: 1.5rem;
     background-color: #ebdbb2;
-    text-align: left;
+    text-align: center;
     width: 100%;
 }
 
@@ -44,7 +47,7 @@ header {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для основного содержимого */
+
 main {
     flex: 1;
     padding: 2rem;
@@ -54,7 +57,7 @@ main {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Стили для секции возможностей */
+
 .features {
     margin-top: 3rem;
     padding: 2rem 0;
@@ -105,7 +108,7 @@ main {
     line-height: 1.6;
 }
 
-/* Адаптивность для секции возможностей */
+
 @media (max-width: 768px) {
     .features {
         margin-top: 2rem;
@@ -126,7 +129,7 @@ main {
     }
 }
 
-/* Стили для секции с изображением */
+
 .hero-section {
     text-align: center;
     padding: 2rem 0;
@@ -148,7 +151,6 @@ main {
     text-align: center;
 }
 
-/* Стили для подвала */
 footer {
     padding: 1.5rem;
     background-color: #fbf1c7;
@@ -199,7 +201,56 @@ footer {
     transition: all 0.3s ease;
 }
 
-/* Медиа-запросы для адаптивности */
+/* Стили для темной темы */
+[data-theme="dark"] {
+    background-color: #282828;
+}
+
+[data-theme="dark"] header {
+    background-color: #3c3836;
+}
+
+[data-theme="dark"] main {
+    background-color: #32302f;
+}
+
+[data-theme="dark"] .feature-item {
+    background: #3c3836;
+}
+
+[data-theme="dark"] .site-title {
+    color: #b8bb26;
+}
+
+[data-theme="dark"] .feature-item h3 {
+    color: #b8bb26;
+}
+
+[data-theme="dark"] .feature-item p,
+[data-theme="dark"] .hero-subtitle,
+[data-theme="dark"] .features-title {
+    color: #ebdbb2;
+}
+
+[data-theme="dark"] .footer-link {
+    color: #ebdbb2;
+}
+
+[data-theme="dark"] .footer-link:hover {
+    background-color: #504945;
+    color: #b8bb26;
+}
+
+[data-theme="dark"] footer {
+    background-color: #282828;
+}
+
+.theme-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
 @media (max-width: 768px) {
     .site-title {
         font-size: 2rem;
