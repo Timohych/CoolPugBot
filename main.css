@@ -1,3 +1,23 @@
+:root {
+    /* Gruvbox Light */
+    --text-color: #3c3836;
+    --text-secondary: #7c6f64;
+    --background-primary: #fbf1c7;
+    --background-secondary: #f2e5bc;
+    --border-color: #d5c4a1;
+    --accent-color: #79740e;
+}
+
+[data-theme="dark"] {
+    /* Gruvbox Dark */
+    --text-color: #ebdbb2;
+    --text-secondary: #a89984;
+    --background-primary: #282828;
+    --background-secondary: #3c3836;
+    --border-color: #504945;
+    --accent-color: #b8bb26;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -306,5 +326,197 @@ footer {
     .footer-icon {
         width: 20px;
         height: 20px;
+    }
+}
+
+.docs-sidebar {
+    float: left;
+    width: 250px;
+    margin-right: 40px;
+    position: sticky;
+    top: 20px;
+}
+
+.docs-nav h3 {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.docs-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.docs-nav li {
+    margin-bottom: 10px;
+}
+
+.docs-nav a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-left: 3px solid transparent;
+    display: block;
+    transition: all 0.3s ease;
+    border-radius: 4px;
+}
+
+.docs-nav a:hover {
+    border-left-color: var(--accent-color);
+    background-color: var(--background-secondary);
+    color: var(--accent-color);
+}
+
+.docs-content {
+    margin-left: 290px;
+}
+
+.doc-section {
+    margin-bottom: 50px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.doc-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: var(--text-color);
+}
+
+.doc-section h3 {
+    font-size: 1.3em;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.doc-section p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+.doc-section ol, .doc-section ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.doc-section li {
+    margin-bottom: 8px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.doc-section a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: opacity 0.3s ease;
+}
+
+.doc-section a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.commands-list {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.command-item {
+    padding: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.command-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.command-item code {
+    display: block;
+    font-size: 1.1em;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--accent-color);
+}
+
+.command-item p {
+    margin: 0;
+    color: var(--text-secondary);
+}
+
+.example-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.example-item h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.example-item p {
+    color: var(--text-secondary);
+}
+
+.faq-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: var(--background-secondary);
+    border-radius: 8px;
+    border-left: 4px solid var(--accent-color);
+}
+
+.faq-item h3 {
+    margin-top: 0;
+    color: var(--text-color);
+}
+
+.faq-item p {
+    margin-bottom: 0;
+    color: var(--text-secondary);
+}
+
+code {
+    background-color: var(--background-secondary);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.95em;
+    color: var(--accent-color);
+}
+
+@media (max-width: 768px) {
+    .docs-sidebar {
+        float: none;
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px;
+        position: static;
+    }
+
+    .docs-content {
+        margin-left: 0;
+    }
+
+    .docs-nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .docs-nav li {
+        margin-bottom: 0;
     }
 }

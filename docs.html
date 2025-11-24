@@ -19,9 +19,117 @@
         <main>
             <div class="container">
                 <div class="hero-section">
-                    <h2 class="hero-subtitle">Здесь будет документация когда я закончу пить пиво</h2>
+                    <h2 class="hero-subtitle">На этой страничке вы можете ознакомиться с мопсом и научиться его использовать во благо своих чатов! Однако учитывайте, что документация отнють не завершена, 90% информации все еще не прописано
+                    </h2>
                 </div>
-                <!-- Здесь будет содержимое документации -->
+
+                <aside class="docs-sidebar">
+                    <nav class="docs-nav">
+                        <h3>Содержание</h3>
+                        <ul>
+                            <li><a href="#getting-started">Начало работы</a></li>
+                            <li><a href="#info">Команды информации</a></li>
+                            <li><a href="#moderation">Команды модераторов</a></li>
+                            <li><a href="#automoderation">Автомодерация</a></li>
+                            <li><a href="#ai">ИИ Ассистент</a></li>
+                            <li><a href="#faq">Частые вопросы</a></li>
+                        </ul>
+                    </nav>
+                </aside>
+
+                <div class="docs-content">
+                    <section id="getting-started" class="doc-section">
+                        <h2>Начало работы</h2>
+                        <ol>
+                            <li>Добавьте <a href="https://t.me/multi_pug_bot" target="_blank">бота в Telegram</a></li>
+                            <li>Напишите /start</li>
+                            <li>Дайте права администратора Мопсу</li>
+                            <li>Выберите язык спомощью /language</li>
+                            <li>Начните использовать бота!</li>
+                        </ol>
+                    </section>
+
+                    <section id="info" class="doc-section">
+                        <h2>Команды для вывода информации</h2>
+                        <div class="commands-list">
+                            <div class="command-item">
+                                <code>/help</code>
+                                <p>Откроет интерактивное меню помощи</p>
+                            </div>
+                            <div class="command-item">
+                                <code>/mods</code>
+                                <p>Покажет список модераторов</p>
+                            </div>
+                            <div class="command-item">
+                                <code>/top</code>
+                                <p>Выведет лидерборд участников по количеству сообщений
+                                <p>"/top day"(за день)</p>
+                                <p>"/top week"(за неделю)</p>
+                                <p>"/top month"(за месяц)</p>
+                                <p>"/top all"(за все время)</p>
+                            </div>
+                            <div class="command-item">
+                                <code>/lostmembers</code>
+                                <p>Покажет список участников которые ушли из чата или были заблокированы (Требует третий уровень модерации!)</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="moderation" class="doc-section">
+                        <h2>Команды модерации</h2>
+                        <div class="commands-list">
+                            <div class="command-item">
+                                <code>/ban</code>
+                                <p>"/ban @user" или "/ban" в ответ на нарушение заблокирует участника навсегда</p>
+                                <p>Можно указать время блокировки и причину, например: "/ban @user 1d чтоб жизнь малиной не казалась"</p>
+                                <p>Время бана можно указать в: Днях(d), часах(h) и минутах(m). В секундах не рекомендуется!</p>
+                                <p>"/unban @user" или "/unban" в ответ на сообщения нарушителя снимет блокировку</p>
+                            </div>
+                            <div class="command-item">
+                                <code>/mute</code>
+                                <p>"/mute @user" или "/mute" в ответ на нарушение заглушит участника навсегда</p>
+                                <p>Можно указать время заглушения и причину, например: "/mute @user 1d мне так захотелось"</p>
+                                <p>Время заглушения можно указать в: Днях(d), часах(h) и минутах(m). В секундах не рекомендуется!</p>
+                                <p>"/unmute @user" или "/unmute" в ответ на сообщения нарушителя даст право говорить снова!p>
+                            </div>
+                            <div class="command-item">
+                                <code>/warn</code>
+                                <p>"/warn @user" или "/warn" в ответ на нарушение добавит предупреждение участнику</p>
+                                <p>Можно указать причину предупреждения, например: "/warn @user кинул NSFW изображение в публичный чат"</p>
+                                <p>Можно получить максимум 3 предупреждения, тогда пользователь будет заглушен на один час, однако этот лимит не строгий, можно выдать даже 100 варнов</p>
+                                <p>"/unwarn @user" или "/unwarn" в ответ на сообщение нарушителя снимет предупреждение</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="ai" class="doc-section">
+                        <h2>ИИ Ассистент</h2>
+                        <div class="example-item">
+                            <h3>Вызов ИИ Ассистента</h3>
+                            <p>Просто напишите <code>/ask</code> и ваш вопрос, а бот ответит</p>
+                        </div>
+                        <div class="example-item">
+                            <h3>Пример 2: Справка в группе</h3>
+                            <p>В групповом чате напишите <code>/help@multi_pug_bot</code>, и бот ответит всем участникам.</p>
+                        </div>
+                    </section>
+
+                    <section id="faq" class="doc-section">
+                        <h2>Частые вопросы</h2>
+                        <div class="faq-item">
+                            <h3>Как добавить бота в чат?</h3>
+                            <p>Найдите бота в Telegram, откройте его профиль и нажмите "Добавить в группу".</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3>Почему бот не отвечает?</h3>
+                            <p>Убедитесь, что бот добавлен в чат и имеет права на отправку сообщений.</p>
+                        </div>
+                        <div class="faq-item">
+                            <h3>Где найти исходный код?</h3>
+                            <p>Весь код доступен на <a href="https://github.com/TimurSl/coolPugTelegramBot" target="_blank">GitHub</a>.</p>
+                        </div>
+                    </section>
+                </div>
             </div>
         </main>
     </div>
