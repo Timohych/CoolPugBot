@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Документация - CoolPugBot!</title>
+    <title>Demoman Bot!</title>
     <link rel="stylesheet" href="main.css">
     <link href="https://fonts.googleapis.com/css2?family=Reddit+Sans:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
     <script src="theme.js"></script>
@@ -11,125 +11,21 @@
 <body>
     <header>
         <div class="container">
-            <h1 class="site-title">CoolPugBot!</h1>
+            <h1 class="site-title">Demoman Bot!</h1>
         </div>
     </header>
 
     <div class="page-content">
         <main>
-            <div class="container">
-                <div class="hero-section">
-                    <h2 class="hero-subtitle">На этой страничке вы можете ознакомиться с мопсом и научиться его использовать во благо своих чатов! Однако учитывайте, что документация отнють не завершена, 90% информации все еще не прописано
-                    </h2>
+            <section class="features">
+                <h2 class="features-title">Документація</h2>
+                <div class="features-list">
+                    <div class="feature-item">
+                        <div class="feature-icon">😔</div>
+                        <h3>Вибачте, документація ще не написана.</h3>
+                    </div>
                 </div>
-
-                <aside class="docs-sidebar">
-                    <nav class="docs-nav">
-                        <h3>Содержание</h3>
-                        <ul>
-                            <li><a href="#getting-started">Начало работы</a></li>
-                            <li><a href="#info">Команды информации</a></li>
-                            <li><a href="#moderation">Команды модераторов</a></li>
-                            <li><a href="#automoderation">Автомодерация</a></li>
-                            <li><a href="#ai">ИИ Ассистент</a></li>
-                            <li><a href="#faq">Частые вопросы</a></li>
-                        </ul>
-                    </nav>
-                </aside>
-
-                <div class="docs-content">
-                    <section id="getting-started" class="doc-section">
-                        <h2>Начало работы</h2>
-                        <ol>
-                            <li>Добавьте <a href="https://t.me/multi_pug_bot" target="_blank">бота в Telegram</a></li>
-                            <li>Напишите /start</li>
-                            <li>Дайте права администратора Мопсу</li>
-                            <li>Выберите язык спомощью /language</li>
-                            <li>Начните использовать бота!</li>
-                        </ol>
-                    </section>
-
-                    <section id="info" class="doc-section">
-                        <h2>Команды для вывода информации</h2>
-                        <div class="commands-list">
-                            <div class="command-item">
-                                <code>/help</code>
-                                <p>Откроет интерактивное меню помощи</p>
-                            </div>
-                            <div class="command-item">
-                                <code>/mods</code>
-                                <p>Покажет список модераторов</p>
-                            </div>
-                            <div class="command-item">
-                                <code>/top</code>
-                                <p>Выведет лидерборд участников по количеству сообщений
-                                <p>"/top day"(за день)</p>
-                                <p>"/top week"(за неделю)</p>
-                                <p>"/top month"(за месяц)</p>
-                                <p>"/top all"(за все время)</p>
-                            </div>
-                            <div class="command-item">
-                                <code>/lostmembers</code>
-                                <p>Покажет список участников которые ушли из чата или были заблокированы (Требует третий уровень модерации!)</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="moderation" class="doc-section">
-                        <h2>Команды модерации</h2>
-                        <div class="commands-list">
-                            <div class="command-item">
-                                <code>/ban</code>
-                                <p>"/ban @user" или "/ban" в ответ на нарушение заблокирует участника навсегда</p>
-                                <p>Можно указать время блокировки и причину, например: "/ban @user 1d чтоб жизнь малиной не казалась"</p>
-                                <p>Время бана можно указать в: Днях(d), часах(h) и минутах(m). В секундах не рекомендуется!</p>
-                                <p>"/unban @user" или "/unban" в ответ на сообщения нарушителя снимет блокировку</p>
-                            </div>
-                            <div class="command-item">
-                                <code>/mute</code>
-                                <p>"/mute @user" или "/mute" в ответ на нарушение заглушит участника навсегда</p>
-                                <p>Можно указать время заглушения и причину, например: "/mute @user 1d мне так захотелось"</p>
-                                <p>Время заглушения можно указать в: Днях(d), часах(h) и минутах(m). В секундах не рекомендуется!</p>
-                                <p>"/unmute @user" или "/unmute" в ответ на сообщения нарушителя даст право говорить снова!p>
-                            </div>
-                            <div class="command-item">
-                                <code>/warn</code>
-                                <p>"/warn @user" или "/warn" в ответ на нарушение добавит предупреждение участнику</p>
-                                <p>Можно указать причину предупреждения, например: "/warn @user кинул NSFW изображение в публичный чат"</p>
-                                <p>Можно получить максимум 3 предупреждения, тогда пользователь будет заглушен на один час, однако этот лимит не строгий, можно выдать даже 100 варнов</p>
-                                <p>"/unwarn @user" или "/unwarn" в ответ на сообщение нарушителя снимет предупреждение</p>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="ai" class="doc-section">
-                        <h2>ИИ Ассистент</h2>
-                        <div class="example-item">
-                            <h3>Вызов ИИ Ассистента</h3>
-                            <p>Просто напишите <code>/ask</code> и ваш вопрос, а бот ответит</p>
-                        </div>
-                        <div class="example-item">
-                            <h3>Пример 2: Справка в группе</h3>
-                            <p>В групповом чате напишите <code>/help@multi_pug_bot</code>, и бот ответит всем участникам.</p>
-                        </div>
-                    </section>
-
-                    <section id="faq" class="doc-section">
-                        <h2>Частые вопросы</h2>
-                        <div class="faq-item">
-                            <h3>Как добавить бота в чат?</h3>
-                            <p>Найдите бота в Telegram, откройте его профиль и нажмите "Добавить в группу".</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Почему бот не отвечает?</h3>
-                            <p>Убедитесь, что бот добавлен в чат и имеет права на отправку сообщений.</p>
-                        </div>
-                        <div class="faq-item">
-                            <h3>Где найти исходный код?</h3>
-                            <p>Весь код доступен на <a href="https://github.com/TimurSl/coolPugTelegramBot" target="_blank">GitHub</a>.</p>
-                        </div>
-                    </section>
-                </div>
+            </section>
             </div>
         </main>
     </div>
@@ -137,26 +33,26 @@
     <footer>
         <div class="container">
             <nav class="footer-links">
-                <a href="https://send.monobank.ua/jar/5p77XUC5p8" class="footer-link footer-link-support" target="_blank">
+                <a href="support.html" class="footer-link footer-link-support" target="_blank">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
                     </svg>
-                    Поддержать
+                    Підтримати
                 </a>
-                <a href="https://github.com/TimurSl/coolPugTelegramBot" class="footer-link" target="_blank">
+                <a href="https://github.com/Timohych/TavishDegrootbot" class="footer-link" target="_blank">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
                     GitHub
                 </a>
-                <a href="https://t.me/multi_pug_bot" class="footer-link" target="_blank">
+                <a href="https://t.me/TavishDeGroot_bot" class="footer-link" target="_blank">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M22 2L11 13"></path>
                         <path d="M22 2L15 22L11 13L2 9L22 2z"></path>
                     </svg>
-                    Бот в Telegram
+                    Бот у Telegram
                 </a>
-                <a href="https://t.me/coolpugbooth" class="footer-link" target="_blank">
+                <a href="https://t.me/tavishDegrootbot" class="footer-link" target="_blank">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M2 8a4 4 0 0 1 4-4h12a4 4 0 0 1 4 4v8a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path>
                         <path d="M8 12h8"></path>
@@ -167,16 +63,19 @@
                 </a>
                 <a href="index.html" class="footer-link">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-                        <polyline points="9 22 9 12 15 12 15 22"></polyline>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
                     </svg>
-                    Главная
+                    Головна
                 </a>
                 <button id="theme-toggle" class="footer-link theme-toggle">
                     <svg class="footer-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"></path>
                     </svg>
-                    Сменить тему
+                    Змінити Оформлення
                 </button>
             </nav>
         </div>
